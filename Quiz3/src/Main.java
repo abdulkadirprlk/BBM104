@@ -15,7 +15,7 @@ public class Main {
 				}
 				if (line == null) {//Case 2 Input file empty error
 					writer.write("The input file should not be empty\n");
-				} else if (!line.matches("[a-zA-Z]+")) {//Case 3 Invalid character error
+				} else if (line.matches(".*[^a-zA-Z ].*")) {//Case 3 Invalid character error
 					writer.write("The input file should not contains unexpected characters\n");
 				} else {//Case 0 No error
 					writer.write(line + "\n");
